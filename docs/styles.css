@@ -55,15 +55,15 @@ nav a {
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
-    flex: 1; /* make nav links share available space */
-    min-width: 120px; /* prevent links from becoming too narrow */
+    flex: 1; 
+    min-width: 120px; 
 }
 nav a:hover {
     background-color: #ddd;
     color: black;
 }
 
-/* header logo: use a class on the <img> to control sizing responsively */
+/* Use a class on the <img> to control sizing responsively */
 .header-logo {
     max-height: 500px;
     width: auto;
@@ -109,7 +109,7 @@ main {
     margin: 0 auto;
 }
 
-/* layout for chef images / person blocks: image and text split are 50/50 */
+/* layout for chef images + person blocks: image and text split are 50/50 */
 .chef-item {
     display: flex;
     align-items: center;
@@ -127,7 +127,7 @@ main {
     padding: 0 10px;
 }
 
-/* layout for pizza images / person blocks: image and text split are 50/50 */
+/* layout for pizza images + person blocks: image and text split are 50/50 */
 .pizza-item {
     display: flex;
     align-items: center;
