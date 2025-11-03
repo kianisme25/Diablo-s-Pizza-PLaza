@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="styles.css">
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        
-    }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    /* Keep page as column flex so footer can sit at the bottom */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
     header {
         background-color: #ff0000;
         color: white;
@@ -40,19 +43,21 @@
     main {
         padding: 20px;
     }
-    footer {
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        background-color: #ff9a00;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-    }
+  /* let main expand so footer is pushed to the bottom */
+  main { flex: 1 0 auto; }
     table {
         margin: 0 auto;
         width: 80%;
     }
+  footer {
+    background-color: #ff9a00;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    /* let footer sit at the end of the flex column */
+    margin-top: auto;
+    width: 100%;
+  }
     table, th, td {
         border: 1px solid black;
     }
@@ -152,10 +157,10 @@
     </tr>
     </table>
 
-     <div class="footer">
-        <footer>
-            <p>&copy; 2025 Diablo's Pizza Plaza. All rights reserved.</p>
-        </footer>
+   <footer>
+    <p>&copy; 2025 Diablo's Pizza Plaza. All rights reserved.</p>
+    </footer>
     </div>
 </body>
-</html>
+  </body>
+  </html>
