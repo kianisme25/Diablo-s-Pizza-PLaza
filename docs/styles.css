@@ -6,11 +6,11 @@ html, body {
     margin: 0;
     padding: 0;
 }
+/* Use flex layout so footer can stick to the bottom when content is short */
 body {
     font-family: Arial, sans-serif;
     z-index: 0;
     background-color: #f4f4f4;
-    /* Use flex layout so footer can stick to the bottom when content is short */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
