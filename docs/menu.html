@@ -1,166 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPP Main Screen</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DPP Main Screen</title>
-    <link rel="stylesheet" href="styles.css">
-
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    /* Keep page as column flex so footer can sit at the bottom */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
     header {
-        background-color: #ff0000;
-        color: white;
-        padding: 5px 0;
-        text-align: center;
-        letter-spacing:4px;
+      background-color: #ff0000;
+      color: white;
+      padding: 5px 0;
+      text-align: center;
+      letter-spacing: 4px;
     }
+
     nav {
-        display: flex;
-        justify-content: center;
-        background-color: #ff9a00;
+      display: flex;
+      justify-content: center;
+      background-color: #ff9a00;
     }
+
     nav a {
-        color: white;
-        padding: 14px 20px;
-        text-decoration: none;
-        text-align: center;
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
     }
+
     nav a:hover {
-        background-color: #ddd;
-        color: black;
+      background-color: #ddd;
+      color: black;
     }
+
     main {
-        padding: 20px;
+      padding: 20px;
+      flex: 1 0 auto;
     }
-  /* let main expand so footer is pushed to the bottom */
-  main { flex: 1 0 auto; }
+
     table {
-        margin: 0 auto;
-        width: 80%;
+      margin: 0 auto;
+      width: 80%;
+      border-collapse: collapse;
     }
-  footer {
-    background-color: #ff9a00;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    /* let footer sit at the end of the flex column */
-    margin-top: auto;
-    width: 100%;
-  }
-    table, th, td {
-        border: 1px solid black;
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
     }
-    th, td {
-        border: 1px solid black;
-        padding: 15px;
-        text-align: center;
-        font-size: 1.2em;
+
+    th,
+    td {
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2em;
     }
-</style>
+
+    footer {
+      background-color: #ff9a00;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: auto;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <img src="ChatGPT Image Sep 30, 2025, 11_16_34 AM.png" alt="Logo" style="height:500px;" />
+  </header>
 
-    <header>
-        <img src="ChatGPT Image Sep 30, 2025, 11_16_34 AM.png" 
-        alt="Logo"
-        style="height:500px;">
-    </header>
-    
-    <!-- Info bar-->
-    <nav>
-        <a href="index.html">Main</a>
-        <a href="aboutus.html">More About Us</a>
-        <a href="locations.html">Locations near you</a>
-        <a href="#menu.html">Menu</a>
-        <a href="sales.html">Sales</a>
-    </nav>
+  <nav>
+    <a href="index.html">Main</a>
+    <a href="aboutus.html">More About Us</a>
+    <a href="locations.html">Locations near you</a>
+    <a href="menu.html">Menu</a>
+    <a href="sales.html">Sales</a>
+  </nav>
 
-    <main>
-        <h1>Our menu of our finest pizzas</h1>
-        <br>
+  <main>
+    <h1>Our menu of our finest pizzas</h1>
 
-        <table>
-    <tr>
-      <th>Cost</th>
-      <th>Pizzas</th>
-    </tr>
-    <tr>
-      <td>€6</td>
-      <td>Spicy Pepperoni</td>
-    </tr>
-    <tr>
-      <td>€7</td>
-      <td>Jalapeño Popper</td>
-    </tr>
-    <tr>
-      <td>€8</td>
-      <td>Buffalo Chicken</td>
-    </tr>
-    <tr>
-      <td>€9</td>
-      <td>Spicy Italian Sausage</td>
-    </tr>
-    <tr>
-      <td>€10</td>
-      <td>Fiery BBQ Chicken</td>
-    </tr>
-    <tr>
-      <td>€11</td>
-      <td>Hot Hawaiian</td>
-    </tr>
-    <tr>
-      <td>€12</td>
-      <td>Chili Cheese</td>
-    </tr>
-    <tr>
-      <td>€13</td>
-      <td>Spicy Veggie</td>
-    </tr>
-    <tr>
-      <td>€14</td>
-      <td>Inferno Meat Lovers</td>
-    </tr>
-    <tr>
-      <td>€15</td>
-      <td>Ghost Pepper Delight</td>
-    </tr>
-    <tr>
-      <td>€16</td>
-      <td>Spicy BBQ Chicken</td>
-    </tr>
-    <tr>
-      <td>€17</td>
-      <td>Chipotle Chicken</td>
-    </tr>
-    <tr>
-      <td>€18</td>
-      <td>Spicy Veggie Supreme</td>
-    </tr>
-    <tr>
-      <td>€19</td>
-      <td>Firecracker Shrimp</td>
-    </tr>
-    <tr>
-      <td>€20</td>
-      <td>Scorching Meat Feast</td>
-    </tr>
+    <table>
+      <thead>
+        <tr>
+          <th>Cost</th>
+          <th>Pizzas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>€6</td>
+          <td>Spicy Pepperoni</td>
+        </tr>
+        <tr>
+          <td>€7</td>
+          <td>Jalapeño Popper</td>
+        </tr>
+        <tr>
+          <td>€8</td>
+          <td>Buffalo Chicken</td>
+        </tr>
+        <tr>
+          <td>€9</td>
+          <td>Spicy Italian Sausage</td>
+        </tr>
+        <tr>
+          <td>€10</td>
+          <td>Fiery BBQ Chicken</td>
+        </tr>
+        <tr>
+          <td>€11</td>
+          <td>Hot Hawaiian</td>
+        </tr>
+        <tr>
+          <td>€12</td>
+          <td>Chili Cheese</td>
+        </tr>
+        <tr>
+          <td>€13</td>
+          <td>Spicy Veggie</td>
+        </tr>
+        <tr>
+          <td>€14</td>
+          <td>Inferno Meat Lovers</td>
+        </tr>
+        <tr>
+          <td>€15</td>
+          <td>Ghost Pepper Delight</td>
+        </tr>
+        <tr>
+          <td>€16</td>
+          <td>Spicy BBQ Chicken</td>
+        </tr>
+        <tr>
+          <td>€17</td>
+          <td>Chipotle Chicken</td>
+        </tr>
+        <tr>
+          <td>€18</td>
+          <td>Spicy Veggie Supreme</td>
+        </tr>
+        <tr>
+          <td>€19</td>
+          <td>Firecracker Shrimp</td>
+        </tr>
+        <tr>
+          <td>€20</td>
+          <td>Scorching Meat Feast</td>
+        </tr>
+      </tbody>
     </table>
+  </main>
 
-   <footer>
+   <div class="footer">
+  <footer>
     <p>&copy; 2025 Diablo's Pizza Plaza. All rights reserved.</p>
-    </footer>
-    </div>
+  </footer>
+  </div>
 </body>
-  </body>
-  </html>
+</html>
