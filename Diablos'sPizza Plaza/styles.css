@@ -1,0 +1,112 @@
+/* Simple site stylesheet extracted from aboutus.html */
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 0;
+    background-color: #f4f4f4;
+}
+
+/* background of fire is at the back  */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('Red-Fire-4K-Desktop-Background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none;
+}
+
+header {
+    background-color: #d80909;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    letter-spacing: 4px;
+}
+.header-logo {
+    max-height: 120px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ff9a00;
+}
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+main {
+    padding: 20px;
+}
+
+.team-image {
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* layout for chef images / person blocks: image and text split are 50/50 */
+.chef-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.chef-image {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    max-width: 600px;
+}
+.chef-description {
+    width: 50%;
+    padding: 0 10px;
+}
+
+/* responsive: stack on smaller screens. heavily used w3 school and other resources for this*/
+@media (max-width: 768px) {
+    .chef-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .chef-image, .chef-description {
+        width: 100%;
+    }
+    .chef-description { padding: 10px 0; }
+}
+
+.mission-statement { margin-top: 40px; }
+.mission-image { height: 200px; display: block; margin: 0 auto 10px; }
+.mission-title { text-align: center; }
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #d80909;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
