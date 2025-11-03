@@ -48,16 +48,50 @@ nav {
     display: flex;
     justify-content: center;
     background-color: #ff9a00;
+    flex-wrap: wrap; /* allow items to wrap on small screens */
 }
 nav a {
     color: white;
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
+    flex: 1; /* make nav links share available space */
+    min-width: 120px; /* prevent links from becoming too narrow */
 }
 nav a:hover {
     background-color: #ddd;
     color: black;
+}
+
+/* header logo: use a class on the <img> to control sizing responsively */
+.header-logo {
+    max-height: 500px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments for navigation and images */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        width: 100%;
+        padding: 10px;
+    }
+    .header-logo {
+        max-height: 300px;
+    }
+    .pizza-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .pizza-image, .chef-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
 }
 
 main {
